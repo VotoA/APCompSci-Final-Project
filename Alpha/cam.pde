@@ -26,6 +26,7 @@ public class cam{
     p2.incrementY(mouseY/27.118644);
     mouseX = 0;
     mouseY = 0;
-    horangle = 
+    horAngle += atan(p2.getZ/p2.getX)
+    vertAngle += atan(p2.getZ/p2.getX)
   }
 }
