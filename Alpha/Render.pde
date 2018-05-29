@@ -7,7 +7,7 @@ public class Render{
     ArrayList<Point> points = points();
     //clear screen here
     //int counter = 0;
-    fill(0, 0, 0);
+    fill(255, 0, 0);
     for(int p=3; p < points.size(); p+=4){
       //if(counter == 0){
       //  counter++;

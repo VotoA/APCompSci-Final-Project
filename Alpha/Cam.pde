@@ -12,7 +12,7 @@ public class Cam{
   }
   public void move(){
     if(key == 'w'){
-      
+      robot.mouseMove(width/2, (height/2)+1);
     } else if(key == 'a'){
       
     } else if(key == 'd'){
@@ -22,8 +22,8 @@ public class Cam{
     }
   }
   public void look(){
-    horizontalAngle += ((width/2 - mouseX)/(width/90));
-    verticalAngle += ((height/2 - mouseY)/(height/60));
+    horizontalAngle += ((width/2 - mouseX)/5);
+    verticalAngle += ((height/2 - mouseY)/5);
     if(verticalAngle > 90){
       verticalAngle = 90;
     }
