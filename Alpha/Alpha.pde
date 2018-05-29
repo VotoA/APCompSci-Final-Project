@@ -1,14 +1,15 @@
 import java.awt.AWTException;
 import java.awt.Robot;
 Robot robot;
-Vector p1 = new Vector(0, 2, 0);
+Vector p1 = new Vector(0, 0, 0);
 float camVerticalAngle = 0;
 float camHorizontalAngle = 0;
 Cam c = new Cam(p1, camVerticalAngle, camHorizontalAngle);
 Render r = new Render();
 Build b = new Build();
 void setup(){
-  size(1600, 900);
+  //fullScreen();
+  size(800, 600);
   //noCursor();
   frameRate(60);
   try {
@@ -17,11 +18,15 @@ void setup(){
   catch (AWTException e) {
     e.printStackTrace();
   }
-  robot.mouseMove(800, 450);
+  robot.mouseMove(width/2, height/2);
 }
 void draw(){
   c.move();
   c.look();
-  r.points(b.getVectors());
-  println(frameCount);
+  r.canvas();
+  //fill(200, 200, 200);
+  //rect(0, 0, width, height);
+  //println(frameCount);
+  println(c.getHorizontalAngle());
+  println(c.getVerticalAngle());
 }

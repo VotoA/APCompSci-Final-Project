@@ -36,7 +36,7 @@ public class Cam{
     if(horizontalAngle < 0){
       horizontalAngle += 360;
     }
-    robot.mouseMove(800, 450);
+    robot.mouseMove(width/2, height/2);
   }
   public float getHorizontalAngle(){
     return horizontalAngle;

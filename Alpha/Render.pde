@@ -4,25 +4,26 @@ public class Render{
     
   }
   public void canvas(){
-    ArrayList<Point> points = points(b.getVectors());
-    int counter = 0;
+    ArrayList<Point> points = points();
+    //int counter = 0;
+    fill(255, 255, 255);
     for(int p=3; p < points.size(); p+=4){
-      if(counter == 0){
-        counter++;
-        fill(133, 133, 80);
-      } else if(counter == 1){
-        counter++;
-        fill(133, 80, 133);
-      } else {
-        counter = 0;
-        fill(80, 133, 133);
-      }
+      //if(counter == 0){
+      //  counter++;
+      //  fill(200, 0, 0);
+      //} else if(counter == 1){
+      //  counter++;
+      //  fill(0, 200, 0);
+      //} else {
+      //  counter = 0;
+      //  fill(0, 0, 200);
+      //}
       quad((points.get((p-3))).getX(), ((points.get((p-3))).getY()), (points.get((p-2))).getX(), ((points.get((p-2))).getY()), (points.get((p-1))).getX(), ((points.get((p-1))).getY()), (points.get((p))).getX(), ((points.get((p))).getY()) );
     }
   }
-  public ArrayList<Point> points(ArrayList vectors){
+  public ArrayList<Point> points(){
     ArrayList<Point> points = new ArrayList<Point>();
-    this.vectors = vectors;
+    this.vectors = b.getVectors();
     for(Vector v : this.vectors){
       float x = v.getX();
       float y = v.getY();
@@ -42,8 +43,8 @@ public class Render{
       }
       vHAngle = camHorizontalAngle - vHAngle;
       vVAngle = camVerticalAngle - vVAngle;
-      float xCanvas = 800 - vHAngle*17.7777777778;
-      float yCanvas = 450 - vVAngle*15.25423725;
+      float xCanvas = width/2 - (vHAngle*(width/90));
+      float yCanvas = height/2 - (vVAngle*(height/59));
       points.add(new Point(xCanvas, yCanvas));
     }
     return points;
