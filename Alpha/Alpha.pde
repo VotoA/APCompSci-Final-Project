@@ -1,23 +1,27 @@
+import java.awt.AWTException;
+import java.awt.Robot;
+Robot robot;
+Vector p1 = new Vector(0, 2, 0);
+float camVerticalAngle = 0;
+float camHorizontalAngle = 0;
+Cam c = new Cam(p1, camVerticalAngle, camHorizontalAngle);
+Render r = new Render();
+Build b = new Build();
 void setup(){
-  size(1600, 900, P3D);
-  noCursor();
+  size(1600, 900);
+  //noCursor();
   frameRate(60);
-  mouseX = 800;
-  mouseY = 450;
-  vector p1 = new vector(0, 2, 0);
-  vector p2 = new vector(0, 2, 1);
-  float camVertAngle = 0;
-  float camHorAngle = 0;
-  new cam(p1, p2);
+  try {
+    robot = new Robot();
+  }
+  catch (AWTException e) {
+    e.printStackTrace();
+  }
+  robot.mouseMove(800, 450);
 }
 void draw(){
-  while(keyPressed){
-  move();
-  }
-}
-void mouseMoved(){
-  look();
-}
-void mouseDragged(){
-  look();
+  c.move();
+  c.look();
+  r.points(b.getVectors());
+  println(frameCount);
 }
