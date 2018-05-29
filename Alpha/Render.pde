@@ -42,8 +42,8 @@ public class Render{
       if(z < 0){
         vHAngle += 180;
       }
-      vHAngle = camHorizontalAngle - vHAngle;
-      vVAngle = camVerticalAngle - vVAngle;
+      vHAngle = vHAngle - camHorizontalAngle;
+      vVAngle = vVAngle - camVerticalAngle;
       float xCanvas = width/2 - (vHAngle*(width/90));
       float yCanvas = height/2 - (vVAngle*(height/60));
       points.add(new Point(xCanvas, yCanvas));
