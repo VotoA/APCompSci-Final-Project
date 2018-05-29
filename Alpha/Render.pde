@@ -5,8 +5,9 @@ public class Render{
   }
   public void canvas(){
     ArrayList<Point> points = points();
+    //clear screen here
     //int counter = 0;
-    fill(255, 255, 255);
+    fill(0, 0, 0);
     for(int p=3; p < points.size(); p+=4){
       //if(counter == 0){
       //  counter++;
@@ -44,7 +45,7 @@ public class Render{
       vHAngle = camHorizontalAngle - vHAngle;
       vVAngle = camVerticalAngle - vVAngle;
       float xCanvas = width/2 - (vHAngle*(width/90));
-      float yCanvas = height/2 - (vVAngle*(height/59));
+      float yCanvas = height/2 - (vVAngle*(height/60));
       points.add(new Point(xCanvas, yCanvas));
     }
     return points;
