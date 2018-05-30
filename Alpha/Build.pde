@@ -11,6 +11,7 @@ public class Build{
     wallTileZ(0, 0, 0);
   }
   public void buildFloors(){
+    floorTile(0, 0, 0);
     floorTile(-100, 0, -100);
     //floorTile(-10, 0, 20);
     //floorTile(-10, 0, 40);

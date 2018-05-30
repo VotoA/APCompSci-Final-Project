@@ -19,7 +19,7 @@ public class Render{
       //  counter = 0;
       //  fill(0, 0, 200);
       //}
-      quad((points.get((p-3))).getX(), ((points.get((p-3))).getY()), (points.get((p-2))).getX(), ((points.get((p-2))).getY()), (points.get((p-1))).getX(), ((points.get((p-1))).getY()), (points.get((p))).getX(), ((points.get((p))).getY()) );
+      quad((points.get((p-2))).getX(), ((points.get((p-2))).getY()), (points.get((p-3))).getX(), ((points.get((p-3))).getY()), (points.get((p-1))).getX(), ((points.get((p-1))).getY()), (points.get((p))).getX(), ((points.get((p))).getY()) );
     }
   }
   public ArrayList<Point> points(){
@@ -44,8 +44,8 @@ public class Render{
       }
       vHAngle = vHAngle - camHorizontalAngle;
       vVAngle = vVAngle - camVerticalAngle;
-      float xCanvas = width/2 - (vHAngle*(width*3));
-      float yCanvas = height/2 - (vVAngle*(height*4.5));
+      float xCanvas = width/2 - (vHAngle*(width/90));
+      float yCanvas = height/2 - (vVAngle*(height/90));
       points.add(new Point(xCanvas, yCanvas));
     }
     return points;
