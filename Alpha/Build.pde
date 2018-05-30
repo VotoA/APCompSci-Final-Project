@@ -5,32 +5,21 @@ public class Build{
     buildFloors();
   }
   public void buildWalls(){
-    wallTileX(100000, 0, 0);
     wallTileX(0, 0, 0);
-    wallTileZ(0, 0, 0);
-    wallTileZ(0, 0, 0);
+    wallTileX(0, 0, 0);
+    wallTileZ(5, 0, 10);
+    wallTileZ(0, 0, -10);
   }
   public void buildFloors(){
-    floorTile(0, 0, 0);
-    floorTile(-100, 0, -100);
-    //floorTile(-10, 0, 20);
-    //floorTile(-10, 0, 40);
-    //floorTile(-10, 0, 60);
-    //floorTile(-10, 0, 80);
-    //floorTile(-10, 0, 100);
-    //floorTile(-10, 0, 120);
-    //floorTile(-10, 0, 140);
-    //floorTile(-10, 0, 160);
-    //floorTile(-10, 0, 180);
-    //floorTile(-10, 0, 200);
+    floorTile(-10, 0, -10);
   }
-  public void wallTileZ(float x, float y, float z){
+  public void wallTileX(float x, float y, float z){
     vectors.add(new Vector(x, y, z));
     vectors.add(new Vector(x, y+10, z));
     vectors.add(new Vector(x+10, y, z));
     vectors.add(new Vector(x+10, y+10, z));
   }
-  public void wallTileX(float x, float y, float z){
+  public void wallTileZ(float x, float y, float z){
     vectors.add(new Vector(x, y, z));
     vectors.add(new Vector(x, y+10, z));
     vectors.add(new Vector(x, y, z+10));

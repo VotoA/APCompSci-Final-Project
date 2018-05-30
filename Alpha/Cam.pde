@@ -12,30 +12,17 @@ public class Cam{
   }
   public void move(){
     if(key == 'w'){
-      robot.mouseMove(width/2, (height/2)+1);
+      //p1.incrementZ(1);
     } else if(key == 'a'){
-      
+      //p1.incrementZ(1);
     } else if(key == 'd'){
-      
+      //p1.incrementZ(1);
     } else if(key == 's'){
-      
+      //p1.incrementZ(1);
     }
   }
   public void look(){
-    horizontalAngle += ((width/2 - mouseX)/3);
-    verticalAngle += ((height/2 - mouseY)/3);
-    if(verticalAngle > 90){
-      verticalAngle = 90;
-    }
-    if(verticalAngle < -90){
-      verticalAngle = -90;
-    }
-    if(horizontalAngle >= 360){
-      horizontalAngle -= 360;
-    }
-    if(horizontalAngle < 0){
-      horizontalAngle += 360;
-    }
+    horizontalAngle += radians(((width/2 - mouseX)/2));
     robot.mouseMove(width/2, height/2);
   }
   public float getHorizontalAngle(){
