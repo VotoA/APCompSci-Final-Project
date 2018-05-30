@@ -22,8 +22,8 @@ public class Cam{
     }
   }
   public void look(){
-    horizontalAngle += ((width/2 - mouseX)/5);
-    verticalAngle += ((height/2 - mouseY)/5);
+    horizontalAngle += ((width/2 - mouseX)/3);
+    verticalAngle += ((height/2 - mouseY)/3);
     if(verticalAngle > 90){
       verticalAngle = 90;
     }

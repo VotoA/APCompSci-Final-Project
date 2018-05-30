@@ -33,7 +33,7 @@ public class Render{
       float camY = c.getYPos();
       float camZ = c.getZPos();
       float camVerticalAngle = c.getVerticalAngle();
-      float camHorizontalAngle = c.getVerticalAngle();
+      float camHorizontalAngle = c.getHorizontalAngle();
       x -= camX;
       z -= camZ;
       y -= camY;
@@ -44,8 +44,8 @@ public class Render{
       }
       vHAngle = vHAngle - camHorizontalAngle;
       vVAngle = vVAngle - camVerticalAngle;
-      float xCanvas = width/2 - (vHAngle*(width/90));
-      float yCanvas = height/2 - (vVAngle*(height/60));
+      float xCanvas = width/2 - (vHAngle*(width*3));
+      float yCanvas = height/2 - (vVAngle*(height*4.5));
       points.add(new Point(xCanvas, yCanvas));
     }
     return points;
