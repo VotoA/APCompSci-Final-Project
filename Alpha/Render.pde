@@ -36,13 +36,13 @@ public class Render{
       x -= camX;
       z -= camZ;
       y -= camY;
-      float vHAngle = atan(z/x);
-      float vVAngle = atan(y/(sqrt(x*x+z*z)));
+      float vHAngle = degrees(atan(z/x));
+      float vVAngle = degrees(atan(y/(sqrt(x*x+z*z))));
       if(z < 0){
-        vHAngle += 3.14159;
+        vHAngle += 180;
       }
       vHAngle = vHAngle - camHorizontalAngle;
-      vHAngle = degrees(vHAngle);
+      vHAngle = (vHAngle + 360) % 360;
       float xCanvas = width/2 - (vHAngle*(width/90));
       float yCanvas = height/2 - (vVAngle*(height/59));
       points.add(new Point(xCanvas, yCanvas));
