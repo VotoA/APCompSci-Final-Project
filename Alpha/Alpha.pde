@@ -10,7 +10,7 @@ Build b = new Build();
 void setup(){
   fullScreen();
   //size(800, 600);
-  //noCursor();
+  noCursor();
   frameRate(60);
   try {
     robot = new Robot();
@@ -24,7 +24,6 @@ void draw(){
   background(200.0, 200.0, 200.0);
   r.canvas();
   println(c.getHorizontalAngle());
-  println(c.getVerticalAngle());
 }
 void mouseMoved(){
   c.look();

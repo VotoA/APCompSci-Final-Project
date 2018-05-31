@@ -22,7 +22,8 @@ public class Cam{
     }
   }
   public void look(){
-    horizontalAngle += ((width/2 - mouseX)/(width/90)));
+    if((width/2 - mouseX)/(width/90) >= .001 || (width/2 - mouseX)/(width/90) <= -0.001){
+    horizontalAngle += ((width/2 - mouseX)/(width/90));
     if(horizontalAngle >= 360){
     horizontalAngle = horizontalAngle%360;
     }
@@ -30,6 +31,7 @@ public class Cam{
     horizontalAngle += 360;
     }
     robot.mouseMove(width/2, height/2);
+    }
   }
   public float getHorizontalAngle(){
     return horizontalAngle;

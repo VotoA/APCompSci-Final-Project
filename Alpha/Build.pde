@@ -5,13 +5,13 @@ public class Build{
     buildFloors();
   }
   public void buildWalls(){
-    wallTileX(0, 0, 0);
-    wallTileX(0, 0, 0);
+    //wallTileX(0, 0, 0);
+    //wallTileX(0, 0, 0);
     wallTileZ(5, 0, 10);
-    wallTileZ(0, 0, -10);
+    wallTileZ(-5, 0, 10);
   }
   public void buildFloors(){
-    floorTile(-10, 0, -10);
+    //floorTile(-10, 0, -10);
   }
   public void wallTileX(float x, float y, float z){
     vectors.add(new Vector(x, y, z));

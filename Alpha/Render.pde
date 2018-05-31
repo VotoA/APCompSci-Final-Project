@@ -36,9 +36,9 @@ public class Render{
       x -= camX;
       z -= camZ;
       y -= camY;
-      float vHAngle = degrees(atan(z/x));
+      float vHAngle = degrees(atan(x/z));
       float vVAngle = degrees(atan(y/(sqrt(x*x+z*z))));
-      if(z < 0){
+      if(x < 0){
         vHAngle += 180;
       }
       vHAngle = vHAngle - camHorizontalAngle;
