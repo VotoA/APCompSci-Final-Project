@@ -5,8 +5,8 @@ public class Build{
     buildFloors();
   }
   public void buildWalls(){
-    //wallTileX(0, 0, 0);
-    //wallTileX(0, 0, 0);
+    wallTileX(5, 0, 10);
+    //wallTileX(-5, 0, 10);
     wallTileZ(5, 0, 10);
     wallTileZ(-5, 0, 10);
   }

@@ -1,6 +1,7 @@
 import java.awt.AWTException;
 import java.awt.Robot;
 Robot robot;
+Test ts = new Test();
 Vector p1 = new Vector(0, 6, 0);
 float camVerticalAngle = 0;
 float camHorizontalAngle = 0;
@@ -9,8 +10,8 @@ Render r = new Render();
 Build b = new Build();
 void setup(){
   fullScreen();
-  //size(800, 600);
-  noCursor();
+  //size(400, 300);
+  //noCursor();
   frameRate(60);
   try {
     robot = new Robot();
@@ -23,7 +24,7 @@ void setup(){
 void draw(){
   background(200.0, 200.0, 200.0);
   r.canvas();
-  println(c.getHorizontalAngle());
+  //println(c.getHorizontalAngle());
 }
 void mouseMoved(){
   c.look();

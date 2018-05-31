@@ -25,7 +25,7 @@ public class Cam{
     if((width/2 - mouseX)/(width/90) >= .001 || (width/2 - mouseX)/(width/90) <= -0.001){
     horizontalAngle += ((width/2 - mouseX)/(width/90));
     if(horizontalAngle >= 360){
-    horizontalAngle = horizontalAngle%360;
+    horizontalAngle = horizontalAngle % 360;
     }
     if(horizontalAngle < 0){
     horizontalAngle += 360;
