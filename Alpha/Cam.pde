@@ -10,16 +10,21 @@ public class Cam{
    this.verticalAngle = verticalAngle;
    this.horizontalAngle = horizontalAngle;
   }
-  public void move(){
-    if(key == 'w'){
-      //p1.incrementZ(1);
-    } else if(key == 'a'){
-      //p1.incrementZ(1);
-    } else if(key == 'd'){
-      //p1.incrementZ(1);
-    } else if(key == 's'){
-      //p1.incrementZ(1);
+  public void moveW(){
+    if(horizontalAngle > 90){
     }
+    //p1.incrementX(cos(horizontalAngle));
+    //p1.incrementZ(sin(horizontalAngle));
+    p1.incrementZ(1);
+  }
+  public void moveA(){
+    p1.incrementX(-1);
+  }
+  public void moveS(){
+    p1.incrementZ(-1);
+  }
+  public void moveD(){
+    p1.incrementX(1);
   }
   public void look(){
     if((width/2 - mouseX)/(width/90) >= .001 || (width/2 - mouseX)/(width/90) <= -0.001){

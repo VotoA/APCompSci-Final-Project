@@ -5,20 +5,13 @@ public class Render{
   }
   public void canvas(){
     ArrayList<Point> points = points();
-    //clear screen here
-    //int counter = 0;
-    fill(255, 0, 0);
+    int counter = 0;
+    fill(128, 0, 128);
     for(int p=3; p < points.size(); p+=4){
-      //if(counter == 0){
-      //  counter++;
-      //  fill(200, 0, 0);
-      //} else if(counter == 1){
-      //  counter++;
-      //  fill(0, 200, 0);
-      //} else {
-      //  counter = 0;
-      //  fill(0, 0, 200);
-      //}
+      if(counter == 8){
+        //fill(250, 95, 0);
+      }
+      counter++;
       quad((points.get((p-2))).getX(), ((points.get((p-2))).getY()), (points.get((p-3))).getX(), ((points.get((p-3))).getY()), (points.get((p-1))).getX(), ((points.get((p-1))).getY()), (points.get((p))).getX(), ((points.get((p))).getY()) );
     }
   }
@@ -36,8 +29,8 @@ public class Render{
       x -= camX;
       z -= camZ;
       y -= camY;
-      float vHAngle = degrees(atan(z/x));
-      float vVAngle = degrees(atan(y/(sqrt(x*x+z*z))));
+      float vHAngle = degrees(atan((z/x)));
+      float vVAngle = degrees(atan((y/(sqrt(x*x+z*z)))));
       if(x < 0){
         vHAngle += 180;
       }
@@ -46,8 +39,8 @@ public class Render{
       if(vHAngle > 180){
       vHAngle -= 360;
       }
-      float xCanvas = width/2 - (vHAngle*(width/90));
-      float yCanvas = height/2 - (vVAngle*(height/59));
+      float xCanvas = width/2 - (vHAngle*(width/60));
+      float yCanvas = height/2 - (vVAngle*(height/33));
       points.add(new Point(xCanvas, yCanvas));
     }
     return points;
