@@ -5,8 +5,22 @@ public class Build{
     buildWalls();
   }
   public void buildWalls(){
-    wallTileX(5, 0, 10);
-    wallTileZ(15, 0, 0);
+    wallTileX(-25, 0, -25);
+    wallTileX(-15, 0, -25);
+    wallTileX(5, 0, -25);
+    wallTileX(15, 0, -25);
+    wallTileX(-25, 0, 25);
+    wallTileX(-15, 0, 25);
+    wallTileX(5, 0, 25);
+    wallTileX(15, 0, 25);
+    wallTileZ(25, 0, -25);
+    wallTileZ(25, 0, -15);
+    wallTileZ(25, 0, 5);
+    wallTileZ(25, 0, 15);
+    wallTileZ(-25, 0, -25);
+    wallTileZ(-25, 0, -15);
+    wallTileZ(-25, 0, 5);
+    wallTileZ(-25, 0, 15);
   }
   public void buildFloors(){
     floorTile(-15, 0, -15);
