@@ -15,16 +15,16 @@ public class Cam{
     }
     //p1.incrementX(cos(horizontalAngle));
     //p1.incrementZ(sin(horizontalAngle));
-    p1.incrementZ(1);
+    p1.incrementZ(10);
   }
   public void moveA(){
-    p1.incrementX(-1);
+    p1.incrementX(-10);
   }
   public void moveS(){
-    p1.incrementZ(-1);
+    p1.incrementZ(-10);
   }
   public void moveD(){
-    p1.incrementX(1);
+    p1.incrementX(10);
   }
   public void look(){
     if((width/2 - mouseX)/(width/90) >= .001 || (width/2 - mouseX)/(width/90) <= -0.001){

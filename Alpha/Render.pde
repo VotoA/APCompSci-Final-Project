@@ -5,13 +5,8 @@ public class Render{
   }
   public void canvas(){
     ArrayList<Point> points = points();
-    int counter = 0;
     fill(128, 0, 128);
     for(int p=3; p < points.size(); p+=4){
-      if(counter == 50){
-        fill(250, 95, 0);
-      }
-      counter++;
       quad((points.get((p-2))).getX(), ((points.get((p-2))).getY()), (points.get((p-3))).getX(), ((points.get((p-3))).getY()), (points.get((p-1))).getX(), ((points.get((p-1))).getY()), (points.get((p))).getX(), ((points.get((p))).getY()) );
     }
   }
@@ -39,8 +34,8 @@ public class Render{
       if(vHAngle > 180){
       vHAngle -= 360;
       }
-      float xCanvas = width/2 - (vHAngle*(width/90));
-      float yCanvas = height/2 - (vVAngle*(height/60));
+      float xCanvas = width/2 - (vHAngle*(width/60));
+      float yCanvas = height/2 - (vVAngle*(height/33));
       points.add(new Point(xCanvas, yCanvas));
     }
     return points;
