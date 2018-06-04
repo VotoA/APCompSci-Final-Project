@@ -1,11 +1,12 @@
 public class Render{
   private ArrayList<Vector> vectors = new ArrayList<Vector>();
+  private boolean shoot = false;
   public Render(){
     
   }
   public void canvas(){
     ArrayList<Point> points = points();
-    fill(128, 0, 128);
+    fill(66, 55, 55);
     for(int p=3; p < points.size(); p+=4){
       quad((points.get((p-2))).getX(), ((points.get((p-2))).getY()), (points.get((p-3))).getX(), ((points.get((p-3))).getY()), (points.get((p-1))).getX(), ((points.get((p-1))).getY()), (points.get((p))).getX(), ((points.get((p))).getY()) );
     }
@@ -39,5 +40,12 @@ public class Render{
       points.add(new Point(xCanvas, yCanvas));
     }
     return points;
+  }
+  public float gun(){
+    
+    return 3.0;
+  }
+  public void shoot(){
+      shoot = true;
   }
 }
