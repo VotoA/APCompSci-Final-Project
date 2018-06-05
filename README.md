@@ -6,7 +6,7 @@ environment. This function will have to include both the ability to create a 3D
 render of an environment, and the ability to move the window within it. This will of 
 course need some type of user interface to manipulate the frame. Some less 
 complicated functions of the program include: a basic animation system, and an 
-independently functioning ai system.
+independently functioning ai system
 
 ### Difficulties
 
