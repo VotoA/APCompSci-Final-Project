@@ -177,19 +177,6 @@ public class Build{
     floorTile(1000, 0, 1100);
     floorTile(1100, 0, 1100);
     floorTile(1200, 0, 1100);
-    
-    floorTile(100, 0, 1200);
-    floorTile(200, 0, 1200);
-    floorTile(300, 0, 1200);
-    floorTile(400, 0, 1200);
-    floorTile(500, 0, 1200);
-    floorTile(600, 0, 1200);
-    floorTile(700, 0, 1200);
-    floorTile(800, 0, 1200);
-    floorTile(900, 0, 1200);
-    floorTile(1000, 0, 1200);
-    floorTile(1100, 0, 1200);
-    floorTile(1200, 0, 1200);
   }
   public void wallTileX(float x, float y, float z){
     vectors.add(new Vector(x, y, z));

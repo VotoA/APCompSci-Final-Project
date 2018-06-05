@@ -13,6 +13,18 @@ public class Cam{
   public void moveW(){
     p1.incrementX(cos(radians(horizontalAngle))*10);
     p1.incrementZ(sin(radians(horizontalAngle))*10);
+    if(p1.getX() > 1300){
+      p1.incrementX(p1.getX());
+    }
+    if(p1.getX() < 100){
+      p1.incrementX(p1.getX());
+    }
+    if(p1.getZ() > 1200){
+      p1.incrementZ();
+    }
+    if(p1.getZ() < -100){
+      p1.incrementZ();
+    }
   }
   public void moveA(){
     p1.incrementX(cos(radians(horizontalAngle+90))*10);
