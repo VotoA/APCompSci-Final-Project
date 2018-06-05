@@ -22,7 +22,7 @@ void setup(){
   robot.mouseMove(width/2, height/2);
 }
 void draw(){
-  background(124, 0, 0);
+  background(85, 10, 10);
   r.canvas();
   println(c.getHorizontalAngle());
   fill(28, 28, 28);
@@ -50,5 +50,5 @@ void mouseDragged(){
   c.look();
 }
 void mousePressed(){
-  
+  r.shoot(second());
 }

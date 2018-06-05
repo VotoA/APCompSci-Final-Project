@@ -11,20 +11,20 @@ public class Cam{
    this.horizontalAngle = horizontalAngle;
   }
   public void moveW(){
-    if(horizontalAngle > 90){
-    }
-    //p1.incrementX(cos(horizontalAngle));
-    //p1.incrementZ(sin(horizontalAngle));
-    p1.incrementZ(50);
+    p1.incrementX(cos(radians(horizontalAngle))*10);
+    p1.incrementZ(sin(radians(horizontalAngle))*10);
   }
   public void moveA(){
-    p1.incrementX(-50);
+    p1.incrementX(cos(radians(horizontalAngle+90))*10);
+    p1.incrementZ(sin(radians(horizontalAngle+90))*10);
   }
   public void moveS(){
-    p1.incrementZ(-50);
+    p1.incrementX(-cos(radians(horizontalAngle))*10);
+    p1.incrementZ(-sin(radians(horizontalAngle))*10);
   }
   public void moveD(){
-    p1.incrementX(50);
+    p1.incrementX(cos(radians(horizontalAngle-90))*10);
+    p1.incrementZ(sin(radians(horizontalAngle-90))*10);
   }
   public void look(){
     if((width/2 - mouseX)/(width/90) >= .001 || (width/2 - mouseX)/(width/90) <= -0.001){

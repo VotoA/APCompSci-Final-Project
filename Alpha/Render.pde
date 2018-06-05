@@ -1,6 +1,5 @@
 public class Render{
   private ArrayList<Vector> vectors = new ArrayList<Vector>();
-  private boolean shoot = false;
   public Render(){
     
   }
@@ -41,11 +40,19 @@ public class Render{
     }
     return points;
   }
-  public float gun(){
-    
+  public float shoot(float startTime){
+    while(second() <= startTime+.4){
+      fill(153, 16, 9);
+      ellipse(width/2, (height/40)*29.7, 130, 113);
+      fill(155, 63, 13);
+      ellipse(width/2, (height/40)*29.7, 80, 70);
+      fill(28, 28, 28);
+      quad(width/2-40, height, width/2+40, height, width/2+20, (height/40)*30, width/2-20, (height/40)*30);
+      quad(width/2-40, height, width/2-55, height, width/2-30, (height/40)*30.5, width/2-20, (height/40)*30);
+      quad(width/2+40, height, width/2+55, height, width/2+30, (height/40)*30.5, width/2+20, (height/40)*30);
+      fill(104, 104, 104);
+      quad(width/2-3, (height/40)*30.25, width/2+3, (height/40)*30.25, width/2+3, (height/40)*29.7, width/2-3, (height/40)*29.7);
+    }
     return 3.0;
-  }
-  public void shoot(){
-      shoot = true;
   }
 }
