@@ -16,7 +16,7 @@ relation to the enviroment.
 
 ### Code Section
 
-'''
+'''Java
   public void canvas(){
     ArrayList<Point> points = points();
     fill(66, 55, 55);
