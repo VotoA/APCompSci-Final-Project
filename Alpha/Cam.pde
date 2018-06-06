@@ -14,29 +14,65 @@ public class Cam{
     p1.incrementX(cos(radians(horizontalAngle))*10);
     p1.incrementZ(sin(radians(horizontalAngle))*10);
     if(p1.getX() > 1300){
-      p1.incrementX(p1.getX());
+      p1.incrementX(1300-p1.getX());
     }
     if(p1.getX() < 100){
-      p1.incrementX(p1.getX());
+      p1.incrementX(100-p1.getX());
     }
-    if(p1.getZ() > 1200){
-      p1.incrementZ();
+    if(p1.getZ() > 1300){
+      p1.incrementZ(1300-p1.getZ());
     }
     if(p1.getZ() < -100){
-      p1.incrementZ();
+      p1.incrementZ(-100-p1.getZ());
     }
   }
   public void moveA(){
     p1.incrementX(cos(radians(horizontalAngle+90))*10);
     p1.incrementZ(sin(radians(horizontalAngle+90))*10);
+    if(p1.getX() > 1300){
+      p1.incrementX(1300-p1.getX());
+    }
+    if(p1.getX() < 100){
+      p1.incrementX(100-p1.getX());
+    }
+    if(p1.getZ() > 1300){
+      p1.incrementZ(1300-p1.getZ());
+    }
+    if(p1.getZ() < -100){
+      p1.incrementZ(-100-p1.getZ());
+    }
   }
   public void moveS(){
     p1.incrementX(-cos(radians(horizontalAngle))*10);
     p1.incrementZ(-sin(radians(horizontalAngle))*10);
+    if(p1.getX() > 1300){
+      p1.incrementX(1300-p1.getX());
+    }
+    if(p1.getX() < 100){
+      p1.incrementX(100-p1.getX());
+    }
+    if(p1.getZ() > 1300){
+      p1.incrementZ(1300-p1.getZ());
+    }
+    if(p1.getZ() < -100){
+      p1.incrementZ(-100-p1.getZ());
+    }
   }
   public void moveD(){
     p1.incrementX(cos(radians(horizontalAngle-90))*10);
     p1.incrementZ(sin(radians(horizontalAngle-90))*10);
+    if(p1.getX() > 1300){
+      p1.incrementX(1300-p1.getX());
+    }
+    if(p1.getX() < 100){
+      p1.incrementX(100-p1.getX());
+    }
+    if(p1.getZ() > 1300){
+      p1.incrementZ(1300-p1.getZ());
+    }
+    if(p1.getZ() < -100){
+      p1.incrementZ(-100-p1.getZ());
+    }
   }
   public void look(){
     if((width/2 - mouseX)/(width/90) >= .001 || (width/2 - mouseX)/(width/90) <= -0.001){
